@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Note 💗</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: "Georgia", serif;
+  background:#ffe4ec;
+  color:#5b2333;
+}
+.app{
+  max-width:420px;
+  margin:auto;
+  min-height:100vh;
+  padding:16px;
+}
+.card{
+  background:#fff;
+  border-radius:16px;
+  padding:18px;
+  margin:12px 0;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+  text-align:center;
+}
+h1,h2{margin:6px 0}
+h1{font-size:22px}
+h2{font-size:18px}
+p{font-size:14px; line-height:1.6}
+
+.gifts{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+.gift{
+  background:#fff0f5;
+  border-radius:14px;
+  padding:14px;
+  font-size:14px;
+}
+.big{
+  font-size:38px;
+  display:block;
+  margin-bottom:6px;
+}
+
+.buttons{
+  display:flex;
+  gap:10px;
+  margin-top:10px;
+}
+.btn{
+  flex:1;
+  padding:10px;
+  border-radius:12px;
+  border:none;
+  background:#f8a5c2;
+  color:#fff;
+  font-weight:600;
+}
+.btn.alt{
+  background:#fbcfe8;
+  color:#5b2333;
+}
+
+.footer{
+  text-align:center;
+  font-size:12px;
+  opacity:.7;
+  margin-top:14px;
+}
+.hidden{display:none}
+</style>
+</head>
+
+<body>
+<div class="app">
+
+  <div class="card">
+    <h1>Hi 🌸</h1>
+    <p>
+      This is just a small, honest note.  
+      Nothing fancy — only kindness, respect, and a smile.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Some Little Gifts 💝</h2>
+    <div class="gifts">
+      <div class="gift"><span class="big">🧸</span> A teddy for warm smiles</div>
+      <div class="gift"><span class="big">🌷</span> Flowers for a good day</div>
+      <div class="gift"><span class="big">🍫</span> Chocolate for sweet moments</div>
+      <div class="gift"><span class="big">🎁</span> A tiny surprise</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>A Simple Question 💗</h2>
+    <p>
+      Would you like to be friends?  
+      No pressure — just a friendly hello.
+    </p>
+
+    <div class="buttons">
+      <button class="btn" onclick="sayYes()">Yes, let’s be friends 😊</button>
+      <button class="btn alt" onclick="sayLater()">Maybe later</button>
+    </div>
+  </div>
+
+  <div class="card hidden" id="reply">
+    <h2>Thank you 🌷</h2>
+    <p id="replyText"></p>
+  </div>
+
+  <div class="footer">
+    Made with respect • Simple • Honest
+  </div>
+
+</div>
+
+<script>
+function sayYes(){
+  document.getElementById('reply').classList.remove('hidden');
+  document.getElementById('replyText').innerText =
+    "That’s really kind. Wishing you a lovely day ahead 😊";
+}
+function sayLater(){
+  document.getElementById('reply').classList.remove('hidden');
+  document.getElementById('replyText').innerText =
+    "No worries at all. Take your time 🌸";
+}
+</script>
+</body>
+  </html>
